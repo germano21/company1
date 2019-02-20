@@ -1,0 +1,44 @@
+body{
+	margin: 0;
+}
+
+ul li{
+	display: inline;
+	float: right;
+}
+
+#conteudo-navbar{
+	width: 80%;
+	margin: 5px auto;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 2px;
+	/*border: 1px solid gray;*/
+	margin-bottom: 2px;
+}
+
+.box{
+	/*background-color: #444;*/
+	color: gray;
+	border: 1px solid gray;
+	/*padding: 20px;*/
+}
+
+.container-conteudo{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 200px 300px;
+	grid-gap: 2px;
+}
+
+.caroussel{
+	grid-template-columns: 1fr;
+	grid-column-start: 1;
+	grid-column-end: 6;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
