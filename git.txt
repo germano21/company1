@@ -1,0 +1,17 @@
+.Você quer saber exatamente o que você alterou, não apenas quais arquivos foram alterados — você pode utilizar o comando git diff.
+	É importante notar que o git diff por si só não mostra todas as mudanças desde o último commit — apenas as mudanças que ainda não foram selecionadas. Isso pode ser confuso, pois se você selecionou todas as suas mudanças, git diff não te dará nenhum resultado.
+
+. Se você quer ver o que selecionou que irá no seu próximo commit, pode utilizar git diff --staged
+
+.E executar git diff --cached para ver o que você já alterou para o estado staged até o momento
+
+.Se você quiser pular a área de seleção, o Git provê um atalho simples. Informar a opção -a ao comando git commit faz com que o Git selecione automaticamente cada arquivo que está sendo monitorado antes de realizar o commit, permitindo que você pule a parte do git add
+
+.Se você modificou o arquivo e já o adicionou na área de seleção, você deve forçar a remoção com a opção -f. Essa é uma funcionalidade de segurança para prevenir remoções acidentais de dados que ainda não foram gravados em um snapshot e não podem ser recuperados do Git.
+
+.Para adicionar um novo repositório remoto no Git com um nome curto, para que você possa fazer referência facilmente, execute git remote add [nomecurto] [url]: 
+	git remote add pb git://github.com/paulboone/ticgit.git
+
+.Se você tem um branch configurado para acompanhar um branch remoto (veja a próxima seção e o Capítulo 3 para mais informações), você pode usar o comando git pull para automaticamente fazer o fetch e o merge de um branch remoto no seu branch atual. Essa pode ser uma maneira mais fácil ou confortável pra você; e por padrão, o comando git clone automaticamente configura seu branch local master para acompanhar o branch remoto master do servidor de onde você clonou (desde que o remoto tenha um branch master). Executar git pull geralmente busca os dados do servidor de onde você fez o clone originalmente e automaticamente tenta fazer o merge dele no código que você está trabalhando atualmente.
+
+.git push: Este comando funciona apenas se você clonou de um servidor que você têm permissão para escrita, e se mais ninguém enviou dados no meio tempo. Se você e mais alguém clonarem ao mesmo tempo, e você enviar suas modificações após a pessoa ter enviado as dela, o seu push será rejeitado. Antes, você terá que fazer um pull das modificações deste outro alguém, e incorporá-las às suas para que você tenha permissão para enviá-las.
