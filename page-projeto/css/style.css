@@ -1,17 +1,16 @@
-ul{
-    float: right;
+body{
+	margin: 0;
+	font-size: 32px;
 }
 
-li{
-    display: inline;
+.menu{
+	margin: 0;
+	font-size: 70%;
+	background-color: gray;
+	width: 100%;
+	display: flex;
 }
 
-#navbar{
-    width: 80%;
-    margin: 0 auto;
-    border-bottom: 1px solid gray;
-}
-
-.buscar{
-    margin: 0 100px;
+.menu-opcoes li{
+	display: inline;
 }
